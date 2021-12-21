@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+    <style>
+        body {
+            /* background-image: url(basic/bg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 30%); */
+            color: white;
+        }
+
+        video {
+            filter: brightness(20%);
+        }
+
+        #background-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        #form {
+            background-color: rgb(36, 141, 173);
+            align-items: center;
+            text-align: center;
+            width: 22%;
+            height: 50%;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            border-radius: 5%;
+        }
+
+        .text {
+            margin: 3%;
+            padding: 4px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+        }
+
+        #topInput {
+            margin-top: 25%;
+        }
+
+        #submit {
+            background-color: rgb(247, 150, 6);
+            color: white;
+            padding: 5px 20px;
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #submit:hover {
+            background-color: rgb(255, 171, 44);
+        }
+
+        #submit:active {
+            background-color: rgb(218, 33, 0);
+            ;
+        }
+
+
+
+        #leftcontentpanel {
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            width: 50%;
+        }
+
+        .defaultheading {
+            width: 61.5%;
+            font-size: 30px;
+            margin-top: 60px;
+            color: rgb(70, 199, 238);
+            font-family: 'Alfa Slab One';
+            transition: 0.5s;
+            transition-timing-function: ease;
+        }
+
+        .defaultpara {
+            font-size: 20px;
+            width: 80%;
+            font-family: 'Merienda';
+            transition: 0.5s;
+            transition-timing-function: ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <video id="background-video" autoplay loop muted poster="basic/bg.mp4">
+        <source src="basic/bg.mp4" type="video/mp4">
+    </video>
+
+    <form action="" id="form">
+
+        <input type="text" class="text" id="topInput" name="firstName" value="First Name" onfocusin="inputFocusInX()"
+            onfocusout="inputFocusOut()"><br>
+        <input type="text" class="text" id="middleInput" name="lastName" value="Last Name" onfocusin="inputFocusInY()"
+            onfocusout="inputFocusOut()"><br>
+        <input type="text" class="text" id="lastInput" name="lastName" value="Email Address" onfocusin="inputFocusInZ()"
+            onfocusout="inputFocusOut()"><br>
+        <input type="submit" id="submit" value="Submit">
+
+
+
+
+
+    </form>
+    <div id="leftcontentpanel">
+        <h1 class='defaultheading'>Where is your information going?</h1>
+        <p class='defaultpara defaultpara2'>The moment you click the submit button; your precious information is sold
+            for some bucks.<br>Don't worry, we'll mail you something, but you may find our email in spam-mails.
+        </p>
+    </div>
+    <script>
+        function inputFocusInX() {
+            let x = document.getElementById("topInput");
+
+            if (x.value == 'First Name' || x.value == 'First Name (REQUIRED)') {
+                x.value = '';
+                x.style.color = 'black';
+            }
+
+        }
+        function inputFocusInY() {
+            let y = document.getElementById("middleInput");
+            if (y.value == 'Last Name' || y.value == 'Last Name (REQUIRED)') {
+                y.value = '';
+                y.style.color = 'black';
+            }
+
+        }
+        function inputFocusInZ() {
+            let z = document.getElementById("lastInput");
+            if (z.value == 'Email Address' || z.value == 'Email Address (REQUIRED)') {
+                z.value = '';
+                z.style.color = 'black';
+            }
+        }
+        function inputFocusOut() {
+            let x = document.getElementById("topInput");
+            let y = document.getElementById("middleInput");
+            let z = document.getElementById("lastInput");
+            if (x.value == '') {
+                x.value = 'First Name (REQUIRED)';
+                x.style.color = 'red';
+            }
+            if (y.value == '') {
+                y.value = 'Last Name (REQUIRED)';
+                y.style.color = 'red';
+            }
+            if (z.value == '') {
+                z.value = 'Email Address (REQUIRED)';
+                z.style.color = 'red';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

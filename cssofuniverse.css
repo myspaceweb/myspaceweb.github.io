@@ -1,0 +1,337 @@
+body{
+/*    background-image: url(basic/bg.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; 
+    background-color:rgba(0,0,0, 80%);
+    */
+    color: white;
+}
+video {
+    filter: brightness(20%);
+ }
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+/* Left of the header */
+.left{
+    display: inline-block;
+    /* border: 2px solid yellowgreen; */
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+/* Logo Image in the header's left */
+.logo img{
+    width: 45px;
+    height: 80px;
+    filter: invert(100%);
+}
+/* Logo label in the header's left */
+.logolabel{
+    width: 150px;
+    position: absolute;
+    font-size: x-large;
+    font-family: 'Alfa Slab One';
+    top: -16px;
+    left: 50px;
+}
+/* Middle of the header */
+.middle{
+    display: block;
+    width: 62%;
+    margin: 12px auto;
+    /* border: 2px solid tomato; */
+}
+/* Navigation Bar in the middle of the Header */
+.navigationBar{
+    display: inline-block;  
+}
+/* Items of Navigation Bar in the middle of the Header */
+.navigationBar li{
+    display: inline-block;
+    font-size: 20px;
+}
+/* Item Links of Navigation Bar in the middle of the Header */
+.navigationBar li a{
+    color: white;
+    text-decoration: none;
+    padding: 34px 10px;
+}
+
+/* Seperate identities of navigation bar item divisions */
+#sun{
+    position: absolute;
+}
+#sun img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#sun img:hover{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+#mercury{
+    position: absolute;
+    left: 380px;
+    
+}
+#mercury img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#mercury img:hover{
+    width: 60px;
+    height: 60px;
+}
+
+#venus{
+    position: absolute;
+    left: 460px;
+    
+}
+#venus img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#venus img:hover{
+    width: 60px;
+    height: 60px;
+}
+#earth{
+    position: absolute;
+    left: 540px;
+    
+}
+#earth img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#earth img:hover{
+    width: 60px;
+    height: 60px;
+}
+#mars{
+    position: absolute;
+    left: 620px;
+    
+}
+#mars img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#mars img:hover{
+    width: 60px;
+    height: 60px;
+}
+#jupiter{
+    position: absolute;
+    left: 700px;
+    
+}
+#jupiter img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#jupiter img:hover{
+    width: 60px;
+    height: 60px;
+}
+#saturn{
+    position: absolute;
+    left: 780px;
+    
+}
+#saturn img{
+    width: 50px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#saturn img:hover{
+    width: 60px;
+    height: 60px;
+}
+#uranus{
+    position: absolute;
+    left: 860px;
+}
+#uranus img{
+    width: 50px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#uranus img:hover{
+    width: 60px;
+    height: 60px;
+}
+#neptune{
+    position: absolute;
+    left: 940px;
+    
+}
+#neptune img{
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    transition-timing-function: ease;
+}
+#neptune img:hover{
+    width: 60px;
+    height: 60px;
+}
+
+/* Right of the header */
+.right{
+  /*  border: 2px solid yellow; */
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    right: 30px
+}
+/* Buttons in right of the header */
+.right button{
+    margin-top: 15px;
+    margin-left: 8px;
+    background-color: rgb(70, 199, 238);
+    border: none;
+    border-radius: 36px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+/* Links in button of right of the header */
+.right button a{
+    font-family: 'Open Sans';
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.right button:hover{
+    background-color: rgb(123, 223, 253);
+    
+}
+.right button:active{
+    background-color: rgb(31, 78, 180);
+}
+
+/* Identity of Main of the Body */
+#contentpanel{
+    
+    position: absolute;
+    top: 110px;
+    left: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Left of the main */
+#leftcontentpanel{
+    width: 50%;
+}
+/* Right of the main */
+#rightcontentpanel{
+    width: 50%;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+/* Heading of content in Main. CONNECTED TO JAVASCRIPT */
+.contentheading{
+    font-family: 'Bungee';
+    font-size: 50px;
+}
+/* Paragraph of content in Main. CONNECTED TO JAVASCRIPT */
+.contentperagraph{
+    font-family: 'Patrick Hand';
+    font-size: 20px;
+    margin-top: -26px;
+    margin-left: 5px;
+}
+/* To change paragraph font size for some navigation bar items. CONNECTED TO JAVASCRIPT */
+.contentperagraphextra{
+    font-size: 17px
+}
+/* default content heading and paragraph */
+.defaultheading{
+    width: 61.5%;
+    font-size: 50px;
+    margin-top: 60px;
+    font-family: 'Alfa Slab One';
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+.defaultpara{
+    font-size: 20px;
+    margin-top: 30px;
+    opacity: 30%;
+    font-family: 'Merienda';
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+.defaultheading:hover{
+    color: rgb(70, 199, 238);
+}
+.defaultpara:hover{
+    opacity: 100%;
+}
+/* for further changes in default paragraph in contentpanel */
+.defaultpara2{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* Footer of the Body */
+.bodyfooter{
+    width: 100%;
+    height: 4%;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    bottom:0%;
+    left:0%;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    opacity: 0%;
+    transition: 2s;
+    transition-timing-function: ease;
+}
+.bodyfooter:hover{
+    opacity: 100%;
+}
+/* copyright in footer */
+.copyright{
+    width: 40%;
+    align-items: center;
+    position: relative;
+    top: 1px;
+    left: 35%;
+}
